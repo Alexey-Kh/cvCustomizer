@@ -15,7 +15,6 @@ function RenameDialog({ open, onClose, onSubmit, onInputChange }) {
         <DialogContent>
           {/* TODO: ensure input validation */}
           <TextField
-            autoFocus
             margin="dense"
             // id="name"
             label="New section name"
