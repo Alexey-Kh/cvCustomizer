@@ -62,7 +62,7 @@ I’ll give you the following input:
     data._settings.inputContainersNames.jobDescription
   } (or are mentioned not enough). Suggest where to add them.
 - provide any other important recommendation
-- write a cover letter`;
+- write a cover letter (don't make it very formal)`;
 
   return (
     <Grid container>
