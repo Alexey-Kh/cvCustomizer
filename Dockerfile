@@ -11,14 +11,8 @@ COPY package*.json ./
 RUN npm ci
 RUN npm install -g serve
 
-# Copy the rest of your application's source code
-COPY . .
-
-# Build the app
-RUN npm run build
-
-# Set the env to "production"
-ENV NODE_ENV production
+# Copy the dist code
+COPY ./dist /app
 
 # Expose the Vite default port (5000)
 EXPOSE 3000
