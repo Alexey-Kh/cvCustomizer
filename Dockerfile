@@ -1,7 +1,7 @@
 # ---- Runtime Stage ----
 
 # Start from a Node.js base image
-FROM node:18-alpine
+FROM node:20-alpine
 
 # Set the working directory in the container to /app
 WORKDIR /app
