@@ -49,6 +49,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v2
+      with:
+        role-to-assume: arn:aws:iam::759212639260:role/github-actions-ecr-ecs
+        aws-region: ${{ env.AWS_REGION }}
+
     - name: Use Node.js 20.x
       uses: actions/setup-node@v3
       with:
@@ -66,12 +73,6 @@ jobs:
     # Setup Docker Buildx
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
-
-    - name: Configure AWS credentials
-      uses: aws-actions/configure-aws-credentials@v2
-      with:
-        role-to-assume: arn:aws:iam::759212639260:role/github-actions-ecr-ecs
-        aws-region: ${{ env.AWS_REGION }}
 
     - name: Login to Amazon ECR
       id: login-ecr
