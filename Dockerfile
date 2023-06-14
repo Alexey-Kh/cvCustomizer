@@ -13,7 +13,7 @@ RUN npm install -g serve
 COPY ./dist ./dist
 
 # Expose the port
-EXPOSE 3000
+EXPOSE 80
 
 # Start the application using npm
-CMD ["serve", "-s", "dist", "-l", "3000"]
+CMD ["serve", "-s", "dist", "-l", "80"]
