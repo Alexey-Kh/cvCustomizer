@@ -35,7 +35,7 @@ env:
   ECS_CLUSTER: default                        # set this to your Amazon ECS cluster name
   ECS_TASK_DEFINITION: .github/workflows/.aws/cvCustomizer-prod-revision2.json     # set this to the path to your Amazon ECS task definition
                                                # file, e.g. .aws/task-definition.json
-  CONTAINER_NAME: 759212639260.dkr.ecr.us-east-1.amazonaws.com/cvcustomizerprod:latest           # set this to the name of the container in the
+  CONTAINER_NAME: cvCustomizer                # set this to the name of the container in the
                                                # containerDefinitions section of your task definition
 
 permissions:
